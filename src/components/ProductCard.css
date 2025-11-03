@@ -1,0 +1,114 @@
+/* 🛍️ Product Card */
+:root {
+  --primary: #2980b9;
+  --primary-dark: #1c5980;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 18px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-card button {
+  padding: 8px 12px;
+  background-color: orange;
+}
+/* 🖼️ Product Image */
+.product-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* 🏷️ Product Title */
+.product-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 8px 0 4px;
+}
+
+/* 💰 Product Price */
+.product-card .price {
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* 🧾 Product Description (optional) */
+.product-card p {
+  color: #444;
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+/* ⚡ Button Container */
+.product-card .card-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* 🟦 Primary Button */
+.product-card .btn-primary {
+  padding: 8px 12px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.product-card .btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ⚪ Secondary Button */
+.product-card .btn-secondary {
+  padding: 8px 12px;
+  background-color: transparent;
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.product-card .btn-secondary:hover {
+  background-color: var(--primary-dark);
+  color: #fff;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
